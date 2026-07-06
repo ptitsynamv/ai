@@ -2,6 +2,8 @@
 
 [Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)
 
+[Prompting Techniques](https://www.promptingguide.ai/techniques)
+
 <h2>Gemini 3 Flash strategies</h2>
 
 <h3>Current day accuracy</h3>
@@ -134,4 +136,14 @@ Before taking any action (either tool calls *or* responses to the user), you mus
     8.2) This persistence must be intelligent: On *transient* errors (e.g. please try again), you *must* retry **unless an explicit retry limit (e.g., max x tries) has been reached**. If such a limit is hit, you *must* stop. On *other* errors, you must change your strategy or arguments, not repeat the same failed call.
 
 9) Inhibit your response: only take an action after all the above reasoning is completed. Once you've taken an action, you cannot take it back.
+```
+<h3>Tree-of-Thought Prompting</h3>
+
+```
+Imagine three different experts are answering this question.
+All experts will write down 1 step of their thinking,
+then share it with the group.
+Then all experts will go on to the next step, etc.
+If any expert realises they're wrong at any point then they leave.
+The question is...
 ```
